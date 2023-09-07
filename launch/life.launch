@@ -4,13 +4,13 @@
 
     <!-- clock server -->
     <arg name="clock" default="6"/>
-    <node pkg="sm_10" type="ClockServer.py" name="get_clock">
+    <node pkg="g1_statemachine" type="ClockServer.py" name="get_clock">
         <param name="~clock" value="$(arg clock)"/>
     </node>
 
     <!-- state_machine -->
-    <node pkg="sm_10" type="sm_main.py" name="sm_main" output='screen'>
-        <rosparam command="load" file="$(find pkg)/io/config/param.yaml"/>
+    <arg name="param" default="$(find pkg)/io/config/param.yaml"/>
+    <node pkg="g1_statemachine" type="sm_main.py" name="sm_main" output='screen'>
         <param name="~clock" value="$(arg clock)"/>
         <param name="~hungry_flag" value="0"/>
         <param name="~dish_counter" value="2"/>
