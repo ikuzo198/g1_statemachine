@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(sm_10)
+project(g1_statemachine)
 
 
 find_package(catkin REQUIRED
@@ -21,7 +21,6 @@ find_package(catkin REQUIRED
    FILES
    GetClock.srv
    SetClock.srv
-   MyService.srv
  )
 
 ## Generate actions in the 'action' folder
@@ -68,7 +67,7 @@ find_package(catkin REQUIRED
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES sm_10
+#  LIBRARIES g1_statemachine
 #  CATKIN_DEPENDS other_catkin_pkg
 #  DEPENDS system_lib
 )
