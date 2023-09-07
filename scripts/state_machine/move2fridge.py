@@ -5,7 +5,7 @@
 import rospy
 import smach
 import smach_ros
-from sm_10.srv import GetClock, SetClock
+from g1_statemachine.srv import GetClock, SetClock
 
 class Move2Fridge(smach.State):
     def __init__(self):

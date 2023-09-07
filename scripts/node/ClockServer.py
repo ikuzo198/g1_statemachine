@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import rospy
-from sm_10.srv import GetClock, SetClock, GetClockResponse, SetClockResponse
+from g1_statemachine.srv import GetClock, SetClock, GetClockResponse, SetClockResponse
 
 rospy.init_node('get_clock')
 clock_value = rospy.get_param('~clock')
